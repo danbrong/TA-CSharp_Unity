@@ -23,13 +23,19 @@ namespace CarInsuranceAssignment
             int Tickets = Convert.ToInt32(myTickets);
 
 
-            bool ageApp = Age > 15;
-            bool Penalty = DUI == false;
-            bool Speed = Tickets < 3;
+            bool qualified = (Age > 15 && DUI == false && Tickets <= 3);
+            if (qualified == true)
+            {
+                Console.WriteLine("You are qualified for insurance!");
+            }
+            else
+            {
+                Console.WriteLine("You are not qualified for insurance!");
+            }
 
-            Console.WriteLine("You are over 15: " + ageApp);
-            Console.WriteLine("You have no DUIs: " + Penalty);
-            Console.WriteLine("You have less than 3 tickets: " + Speed);
+            //Console.WriteLine("You are over 15: " + ageApp);
+            //Console.WriteLine("You have no DUIs: " + Penalty);
+            //Console.WriteLine("You have less than 3 tickets: " + Speed);
 
             //Console.WriteLine(Age);
             //Console.WriteLine(DUI);
