@@ -31,7 +31,7 @@ namespace ShippingQuoteAssignment
                 Console.WriteLine("What is the package length in cm? Answer only as a number.");
                 int Length = Convert.ToInt32(Console.ReadLine());
 
-                if ((Width * Height * Length) > 50)
+                if ((Width + Height + Length) > 50)
                 {
                     Console.WriteLine("This package is too big to be shipped.");
                     Console.ReadLine();
