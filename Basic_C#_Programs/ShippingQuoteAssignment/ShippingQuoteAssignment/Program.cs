@@ -22,20 +22,23 @@ namespace ShippingQuoteAssignment
             }
             else
             {
+                Console.WriteLine("What is the package width in cm? Answer only as a number.");
+                int Width = Convert.ToInt32(Console.ReadLine());
+
                 Console.WriteLine("What is the package height in cm? Answer only as a number.");
                 int Height = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("What is the package length in cm? Answer only as a number.");
                 int Length = Convert.ToInt32(Console.ReadLine());
 
-                if ((Height * Length) > 50)
+                if ((Width * Height * Length) > 50)
                 {
                     Console.WriteLine("This package is too big to be shipped.");
                     Console.ReadLine();
                 }
                 else
                 {
-                    int quote = ((Weight * Height * Length) / 100);
+                    int quote = (((Weight * Height * Length) * Weight) / 100);
                     Console.WriteLine("Your estimated total for shipping is: $" + quote);
                     Console.ReadLine();
                 }
