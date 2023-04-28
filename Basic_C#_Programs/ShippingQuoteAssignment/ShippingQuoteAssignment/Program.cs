@@ -38,7 +38,7 @@ namespace ShippingQuoteAssignment
                 }
                 else
                 {
-                    int quote = (((Weight * Height * Length) * Weight) / 100);
+                    int quote = (((Width * Height * Length) * Weight) / 100);
                     Console.WriteLine("Your estimated total for shipping is: $" + quote);
                     Console.ReadLine();
                 }
