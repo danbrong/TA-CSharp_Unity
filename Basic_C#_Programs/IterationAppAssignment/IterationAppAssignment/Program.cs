@@ -18,7 +18,8 @@ namespace IterationAppAssignment
 
             for (int i = 0; i < Slayers.Length; i++)
             {
-                Console.WriteLine(Slayers[i] + choice1 + "s.");
+                Slayers[i] += choice1;
+                Console.WriteLine(Slayers[i]);
             }
 
             Console.WriteLine("\n");
@@ -61,77 +62,85 @@ namespace IterationAppAssignment
             }
 
 
-            // List of Strings, Unique
+            //    // List of Strings, Unique
             List<string> Sopranos = new List<string>() { "Tony", "Carmella", "Meadow", "Anthony", "Junior" };
 
             Console.WriteLine("Who is your favorite Soprano Family Member? ");
             string choice2 = Console.ReadLine();
 
-            int index = Sopranos.IndexOf(choice2);
-            switch (index)
+            for (int index = Sopranos.IndexOf(choice2); index < Sopranos.Count; index++)
             {
-                case 0:
-                    Console.WriteLine("0");
+                if (Sopranos.Contains(choice2))
+                {
+                    Console.WriteLine(Sopranos.IndexOf(choice2));
                     break;
-                case 1:
-                    Console.WriteLine("1");
-                    break;
-                case 2:
-                    Console.WriteLine("2");
-                    break;
-                case 3:
-                    Console.WriteLine("3");
-                    break;
-                case 4:
-                    Console.WriteLine("4");
-                    break;
-                default:
+                }
+                else
+                {
                     Console.WriteLine("Sorry, I don't recognize that Soprano.");
                     break;
+                }
             }
 
 
-            // List of Strings, two identical (DON"T KNOW HOW TO SHOW SECOND CAT INDEX)
+
+            // List of Strings, two identical
             List<string> Animals = new List<string>() { "Cat", "Dog", "Chicken", "Turtle", "Cat" };
 
             Console.WriteLine("Type in one of the following; Cat, Dog, Chicken, or Turtle, to find its index.");
             string pet = Console.ReadLine();
-            
+
 
             if (!Animals.Contains(pet))
             {
                 Console.WriteLine("Sorry, I don't recognize that animal.");
             }
 
-            for (int animalIndex = Animals.IndexOf(pet); animalIndex < Animals.Count; animalIndex++)
+            for (int a = 0; a < Animals.Count; a++)
             {
-                if (Animals.Contains(pet))
+                if (Animals[a] == pet)
                 {
-                    Console.WriteLine(Animals.IndexOf(pet));
+                    Console.WriteLine(Animals[a] + " index is " + a);
                 }
             }
-            // ABOVE SECTION NEEDS REVISION
+          
 
 
             // List of Strings, two identical plus forloop
-            List<string> birdPrey = new List<string>() { "Harley", "Huntress", "Canary", "Renee", "Cass", "Harley" };
+            List<string> birdPrey1 = new List<string>() { "Harley", "Huntress", "Canary", "Renee", "Cass", "Harley" };
+            List<string> birdPrey2 = new List<string>();
 
-            
-
-            foreach (string bird in birdPrey)
+            foreach (string name in birdPrey1)
             {
-                    if (bird == bird)
-                    {
-                        Console.WriteLine(bird + ": This bird has shown up once before!");
-                    }
-                    else
-                    {
-                        Console.WriteLine(bird + ": This bird is new!");
-                    }
+                Console.WriteLine(name);
             }
-            // ABOVE SECTION NEEDS REVISIONS, UNSURE HOW TO PROCEED ON PARTS 5 AND 6
-            
+
+            foreach (string name2 in birdPrey2)
+            {
+                Console.WriteLine(name2);
+            }
+
+
+            foreach (string bird in birdPrey1)
+            {
+                if (!birdPrey2.Contains(bird))
+                {
+                    birdPrey2.Add(bird);
+                    
+                }
+                else if (birdPrey2.Contains(bird))
+                {
+                    Console.WriteLine("There is a duplicate entry for " + bird + ".");
+                    
+                }
+                else
+                {
+                    break;
+                    
+                }
+            }
             Console.ReadLine();
         }
     }
 }
+
