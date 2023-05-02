@@ -8,21 +8,21 @@ namespace MethodPractice
 {
     public class MathMethods
     {
-        public static int MyAdd(int x, int y)
+        public int MyAdd(int x)
         {
-            int sum = x + y;
+            int sum = x + 2;
             return sum;
         }
 
-        public static int MySub(int x, int y)
+        public int MySub(int x)
         {
-            int diff = x - y;
+            int diff = x - 2;
             return diff;
         }
 
-        public static int MyMult(int x, int y)
+        public int MyMult(int x)
         {
-            int prod = x * y;
+            int prod = x * 2;
             return prod;
         }
     }
