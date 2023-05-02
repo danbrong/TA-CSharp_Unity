@@ -17,11 +17,21 @@ namespace MethodSubmissionAssignment
             string stringX = (Console.ReadLine());
             int x = Convert.ToInt32(stringX);
 
-            Console.WriteLine("Enter a second number, or just press Enter.");
-            string stringY = (Console.ReadLine());
-            int y = Convert.ToInt32(stringY);
 
-            Console.WriteLine(Methods.Optional(x, y));
+            try
+            {
+                Console.WriteLine("Enter a second number, or just press Enter.");
+                string stringY = (Console.ReadLine());
+                int y = Convert.ToInt32(stringY);
+                Console.WriteLine(Methods.Optional(x, y));
+            }
+            catch
+            {
+                Console.WriteLine(Methods.Optional(x));
+            }
+            
+
+            
             Console.ReadLine();
 
         }

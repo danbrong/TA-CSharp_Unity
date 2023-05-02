@@ -10,7 +10,7 @@ namespace MethodSubmissionAssignment
     {
         public static int Optional(int x, int y = 14)
         {
-            int sum = x + y;
+            int sum = x + 2;
             return sum;
         }
     }
