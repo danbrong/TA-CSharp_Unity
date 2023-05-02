@@ -1,0 +1,3 @@
+C:\Users\bchan\Documents\00 - Git Directories\TA-CSharp_Unity\TA-CSharp_Unity\Basic_C#_Programs\MethodClassAssignment\MethodClassAssignment\obj\Debug\MethodClassAssignment.csproj.AssemblyReference.cache
+C:\Users\bchan\Documents\00 - Git Directories\TA-CSharp_Unity\TA-CSharp_Unity\Basic_C#_Programs\MethodClassAssignment\MethodClassAssignment\obj\Debug\MethodClassAssignment.csproj.SuggestedBindingRedirects.cache
+C:\Users\bchan\Documents\00 - Git Directories\TA-CSharp_Unity\TA-CSharp_Unity\Basic_C#_Programs\MethodClassAssignment\MethodClassAssignment\obj\Debug\MethodClassAssignment.csproj.CoreCompileInputs.cache
