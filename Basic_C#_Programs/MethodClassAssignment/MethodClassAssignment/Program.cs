@@ -13,6 +13,7 @@ namespace MethodClassAssignment
             Void_Method myObj = new Void_Method();
 
             myObj.MyOp(2, 3);
+            myObj.MyOp(x: 6, y: 7);
 
             Console.ReadLine();
         }
