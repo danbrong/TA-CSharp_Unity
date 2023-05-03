@@ -26,7 +26,11 @@ namespace EnumAssignment
                 Console.WriteLine("Please enter a day of the week.");
                 string choice = Console.ReadLine();
                 Days dayChoice = (Days) Enum.Parse(typeof(Days));
-                Console.WriteLine(dayChoice);
+
+                if (dayChoice == choice)
+                {
+                    Console.WriteLine(dayChoice);
+                }
             }
             catch
             {
