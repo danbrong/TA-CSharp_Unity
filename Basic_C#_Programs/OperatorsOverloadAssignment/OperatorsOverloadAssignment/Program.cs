@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassesAndObjectsPractice
+namespace OperatorsOverloadAssignment
 {
-    interface IWalkAway
+    internal class Program
     {
-        void WalkAway(Player player);
+        static void Main(string[] args)
+        {
+        }
     }
 }
