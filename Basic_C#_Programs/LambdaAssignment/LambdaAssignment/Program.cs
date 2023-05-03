@@ -24,6 +24,8 @@ namespace LambdaAssignment
                new Employee() {Id = 10, firstName = "Nicki", lastName = "Minaj" },
             };
 
+            List<Employee> joePloyee = new List<Employee>();
+            
 
             // For Each Joe List
             foreach (Employee employee in Employees)
@@ -31,7 +33,6 @@ namespace LambdaAssignment
 
                 if (employee.firstName == "Joe")
                 {
-                    List<Employee> joePloyee = new List<Employee>();
                     joePloyee.Add(employee);
                 }
                 Console.WriteLine(employee.firstName + " " + employee.lastName + ", " + employee.Id);
@@ -39,8 +40,11 @@ namespace LambdaAssignment
 
             // Lambda Joe List
             List<Employee> joePloyee2 = Employees.Where(j => j.firstName == "Joe").ToList();
-
             Console.WriteLine(joePloyee2.Count);
+
+            // Lambda Id Check
+            List<Employee> fivePlus = Employees.Where(s => s.Id > 5).ToList();
+            Console.WriteLine(fivePlus.Count);
 
             Console.ReadLine();
         }
