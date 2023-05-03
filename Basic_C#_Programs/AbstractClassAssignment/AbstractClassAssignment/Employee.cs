@@ -17,5 +17,7 @@ namespace AbstractClassAssignment
             Console.WriteLine("I Quit (in employee)");
         }
 
+        
+
     }
 }

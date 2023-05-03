@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace MethodsAndObjectsAssignment
 {
-    public class Employee : Person
+    public class Employee<T> : Person
     {
         public int Id { get; set; }
+        public List<T> Things { get; set; }
 
-        public static bool operator ==(Employee employee, Employee employee2)
+        public static bool operator ==(Employee<T> employee, Employee<T> employee2)
         {
             if (employee.Id == employee2.Id)
                 return true;
             else
                 return false;
         }
-        public static bool operator !=(Employee employee, Employee employee2)
+        public static bool operator !=(Employee<T> employee, Employee<T> employee2)
         {
             if (employee.Id != employee2.Id)
                 return true;
