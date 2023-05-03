@@ -8,9 +8,9 @@ namespace AbstractClassAssignment
 {
     interface IQuittable
     {
-        public void Quit()
-        {
-            Console.WriteLine("I quit!");
-        }
+        void Quit();
+        
+        
+       
     }
 }
